@@ -1,0 +1,88 @@
+<!-- A beautiful example of the grid by making simple grid clone porjects -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/Css/Grid.css"> -->
+    <title>Just a Grid thing</title>
+</head>
+
+
+
+
+
+<!-- this is the external css, which i converted into internal css just for demo purposes -->
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    text-align: center;
+    margin: 5px 20px 0;   
+    border: 2px solid black;
+    height: 98vh;
+
+    display:grid;
+    grid-template-columns: repeat(3, 1fr) 150px; 
+    /* grid-template-columns: repeat(auto-fill, minmax(150px,200px))   */
+    grid-template-rows: 70px 165px 339px 70px;
+    grid-gap: 20px;
+    /* ........................... they both are going to spoil the grid, have a look................................. */     
+    /* align-items: center; 
+    /* justify-content: center; */
+}
+
+.class1{
+    background-color:red;
+    grid-column: 1/-1 ;
+}
+.class2{
+    background-color:blue;
+}
+.class3{
+    background-color:yellow;
+}
+.class4{
+    background-color:green;
+    grid-column: 4/5;
+    grid-row: 2/4;
+}
+.class5{
+    background-color:violet;
+    grid-row: 3/2;
+    grid-column: 3/4;
+}
+.class6{
+    background-color:goldenrod;
+    grid-column: 1/4;
+}
+.class7{
+    background-color:pink;
+    grid-column: 1/-1;
+}
+</style>
+
+
+
+
+
+
+<body>
+    <main>
+        <div class="class1">Header</div>
+        <div class="class2">Div 2</div>
+        <div class="class3">Div 3</div>
+        <div class="class4">Menu Bar</div>
+        <div class="class5">Body</div>
+        <div class="class6">Services</div>
+        <div class="class7">Footer</div>
+    </main>
+</body>
+</html>
